@@ -8,48 +8,105 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            margin: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.69) 0%, rgba(0, 0, 0, 0.69) 0.01%, rgba(203, 203, 203, 0.69) 100%);
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .lab-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lab-title .subtitle {
+            font-size: 0.75em;
+            color: #ccc;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
             padding: 40px;
             max-width: 800px;
             margin: auto;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-bottom: 0.5em;
-        }
-
-        p {
-            margin-bottom: 1.2em;
         }
     </style>
 </head>
 
 <body>
-    <h1>Yonsei Social Network & Neuroscience Lab</h1>
-    <p><strong>Department of Sociology, Yonsei University, Seoul, South Korea</strong></p>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="SNN Lab Logo" class="logo" />
+            <div class="lab-title">
+                <strong>Social Networks & Neuroscience</strong><br>
+                <span class="subtitle">All kinds of networks in the brain, social and in-between</span>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="#">About</a>
+            <a href="#">Team</a>
+            <a href="#">Publications</a>
+            <a href="#">Projects/Data</a>
+            <a href="#">Media</a>
+            <a href="#">News</a>
+            <a href="#">Contacts</a>
+        </nav>
+    </header>
 
-    <p>
-        At Yonsei SNN Lab, we study how social networks, the brain, and health are interrelated.
-    </p>
+    <div class="main-content">
+        <h1>Yonsei Social Network & Neuroscience Lab</h1>
+        <p><strong>Department of Sociology, Yonsei University, Seoul, South Korea</strong></p>
 
-    <p>
-        We focus on three main questions:
-        <br><strong>1. How do the social networks around us shape the human brain?</strong>
-        <br><strong>2. How does the brain enable complex human social networks?</strong>
-        <br><strong>3. How do the brain and social networks work together to affect our behavior and health?</strong>
-    </p>
+        <p>
+            At Yonsei SNN Lab, we study how social networks, the brain, and health are interrelated.
+        </p>
 
-    <p>
-        To explore these questions, we lead several research projects such as
-        <strong>KSHAP</strong> (Korean Social life, Health, and Aging Project),
-        <strong>KSAH</strong> (Korean Study of Adolescent Health), and
-        <strong>KCWIS</strong> (Korean Child Wellbeing Index Survey).
-    </p>
+        <p>
+            We focus on three main questions:
+            <br><strong>1. How do the social networks around us shape the human brain?</strong>
+            <br><strong>2. How does the brain enable complex human social networks?</strong>
+            <br><strong>3. How do the brain and social networks work together to affect our behavior and
+                health?</strong>
+        </p>
 
-    <p>
-        We take an interdisciplinary approach to integrate theory and methodology from
-        medical sociology, social network analysis, social neuroscience, and machine learning.
-    </p>
+        <p>
+            To explore these questions, we lead several research projects such as
+            <strong>KSHAP</strong> (Korean Social life, Health, and Aging Project),
+            <strong>KSAH</strong> (Korean Study of Adolescent Health), and
+            <strong>KCWIS</strong> (Korean Child Wellbeing Index Survey).
+        </p>
+
+        <p>
+            We take an interdisciplinary approach to integrate theory and methodology from
+            medical sociology, social network analysis, social neuroscience, and machine learning.
+        </p>
+    </div>
 </body>
 
 </html>

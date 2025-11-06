@@ -1,2 +1,3 @@
 # snnlab.github.io
-SNN Lab website
+SNN LAB (Social Networks & Neuroscience Lab) Website renewal project
+

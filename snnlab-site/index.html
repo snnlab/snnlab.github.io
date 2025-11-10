@@ -1,13 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>snnlab-site</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <title>Yonsei SNN Lab</title>
+  <link rel="icon" href="images/tabimage.png" type="image/png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background: white;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 120px;
+      margin-right: 15px;
+    }
+
+    .lab-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lab-title strong {
+      font-size: 1.6em;
+    }
+
+    .lab-title .subtitle {
+      font-size: 1em;
+      color: black;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.3em;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      padding: 40px;
+      width: 90vw;
+      text-align: left;
+      margin: auto;
+      color: black;
+    }
+
+    .photo {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .centered-section {
+      text-align: center;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="images/homelogoblack.png" alt="SNN Lab Logo" class="logo" />
+    </div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="#projects">Projects/Data</a>
+      <a href="#media">Media</a>
+      <a href="#news">News</a>
+      <a href="#contacts">Contacts</a>
+    </nav>
+    <button id="lang-toggle" style="margin-left: 20px; padding: 6px 12px; font-size: 1em;">
+      한국어
+    </button>
+  </header>
+
+  <section id="about" class="main-content" style="display: flex; flex-direction: row; gap: 50px; align-items: stretch;">
+    <div style="flex: 1; overflow: hidden;">
+      <video controls autoplay muted loop playsinline
+        style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
+        <source src="videos/ksahnetwork2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div id="english-content" style="flex: 1; height: 100%; margin-top: 0; padding-top: 0;">
+      <h1>Yonsei Social Network & Neuroscience Lab</h1>
+      <p><strong>Department of Sociology, Yonsei University, Seoul, South Korea</strong></p>
+      <p>The Yonsei SNN Lab investigates the dynamic interconnections between social networks, the brain, and
+        human health.</p>
+      <p>Our research centers on three key questions:</p>
+      <ol>
+        <li><strong>In what ways do our surrounding social networks shape the structure and function of the
+            human brain?</strong></li>
+        <li><strong>How does the brain support and sustain complex social network behaviors?</strong></li>
+        <li><strong>How do the brain and social networks jointly influence human behavior and health
+            outcomes?</strong></li>
+      </ol>
+      <p>We lead projects such as <strong>KSHAP</strong> (Korean Social life, Health, and Aging Project),
+        <strong>KSAH</strong> (Korean Study of Adolescent Health), and <strong>KCWIS</strong> (Korean Child
+        Wellbeing Index Survey).
+      </p>
+      <p>Our interdisciplinary approach draws from medical sociology, social network analysis, social
+        neuroscience, and machine learning to integrate theory with empirical methods.</p>
+    </div>
+
+    <div id="korean-content" style="display: none; flex: 1; height: 100%; margin-top: 0; padding-top: 0;">
+      <h1>연세대학교 사회연결망·신경과학 연구실</h1>
+      <p><strong>연세대학교 사회학과, 서울, 대한민국</strong></p>
+      <p>연세대학교 사회학과 인지심리사회학 연구실은 사회연결망, 뇌 그리고 건강을 연구합니다.</p>
+      <p>우리는 다음의 세 가지 주요 질문에 관심이 있습니다:</p>
+      <ol>
+        <li><strong>우리를 둘러싼 사회연결망은 어떻게 우리의 뇌를 바꾸는가?</strong></li>
+        <li><strong>우리의 뇌는 어떻게 복잡한 사회적 상호작용을 가능하게 하는가?</strong></li>
+        <li><strong>사회연결망과 뇌가 어떻게 상호작용하며 우리의 행동이나 건강에 영향을 미치는가?</strong></li>
+      </ol>
+      <p>이러한 질문들을 연구하기 위해, <strong>KSHAP</strong>(한국인의 사회적 삶, 건강과 노화에 대한 조사),
+        <strong>KSAH</strong>(한국 고등학생의 정신 건강에 대한 융복합연구),
+        <strong>KCWIS</strong>(한국 어린이-청소년 행복지수 연구) 등의 프로젝트를 진행하고 있습니다.
+      </p>
+      <p>우리 연구는 의료사회학, 사회연결망 분석, 사회신경과학, 머신러닝에 이르는 다양한 이론과 방법론을 아우르는 융합연구를 지향합니다.</p>
+    </div>
+  </section>
+
+  <section id="team" class="centered-section">
+    <img src="images/labphoto.jpeg" alt="SNN Lab Group Photo" class="photo" style="width: 90vw; max-width: 1200px;" />
+  </section>
+  <script>
+    const toggleBtn = document.getElementById('lang-toggle');
+    const engContent = document.getElementById('english-content');
+    const korContent = document.getElementById('korean-content');
+
+    toggleBtn.addEventListener('click', () => {
+      const isEnglish = engContent.style.display !== 'none';
+
+      if (isEnglish) {
+        engContent.style.display = 'none';
+        korContent.style.display = 'block';
+        toggleBtn.textContent = 'English';
+      } else {
+        engContent.style.display = 'block';
+        korContent.style.display = 'none';
+        toggleBtn.textContent = '한국어';
+      }
+    });
+  </script>
+</body>
+
 </html>

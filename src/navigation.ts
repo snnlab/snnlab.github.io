@@ -23,7 +23,7 @@ export const headerData = {
         },
       ],
     },
-        {
+    {
       text: 'Publications',
       links: [
         {

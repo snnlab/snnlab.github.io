@@ -2,6 +2,7 @@
 title: 'Sunbelt 2025 Paris Conference'
 publishDate: 2025-07-01
 excerpt: 'SNN Lab participated in the INSNA Sunbelt 2025 conference.'
+image: https://raw.githubusercontent.com/snnlab/snnlab.github.io/main/public/blogpost/sunbelt2025.jpeg
 tags: ['conference']
 ---
 

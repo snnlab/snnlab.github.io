@@ -8,18 +8,18 @@ export const headerData = {
     },
     {
       text: 'Team',
-      href: getPermalink('/'),
+      href: getPermalink('/team/team'),
     },
     {
       text: 'Projects/Data',
       links: [
         {
           text: 'KSHAP',
-          href: getPermalink('/homes/mobile-app'),
+          href: getPermalink('/projects_data/kshap_pro'),
         },
         {
           text: 'KSAH',
-          href: getPermalink('/homes/personal'),
+          href: getPermalink('/projects_data/ksah_pro'),
         },
       ],
     },
@@ -28,11 +28,15 @@ export const headerData = {
       links: [
         {
           text: 'KSHAP',
-          href: getPermalink('/homes/mobile-app'),
+          href: getPermalink('/publications/kshap_pub'),
         },
         {
           text: 'KSAH',
-          href: getPermalink('/homes/personal'),
+          href: getPermalink('/publications/ksah_pub'),
+        },
+        {
+          text: 'Books & Book Chapters',
+          href: getPermalink('/publications/books'),
         },
       ],
     },

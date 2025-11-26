@@ -1,0 +1,48 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'SNN Lab All Publications',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero>
+    <Fragment slot="title"> Publications: All </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features classes={{ container: 'pt-0 mt-0 -mt-40' }}>
+    <Fragment slot="title">
+      <span class="text-3xl font-semibold">Peer-Reviewed Journal Articles</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      <div class="mt-8">
+        <h2 class="text-2xl font-semibold mb-4">2024</h2>
+
+        <div class="space-y-4 text-sm">
+          <p>
+            Jiwon Baek, Ekaterina Baldina, Kiho Sung, Sung-Ha Lee, Nicholas A Christakis, Peter Bearman, Hyeon Chang
+            Kim, Sang Hui Chu, Eun Lee, Yeong-Ran Park, Jeanyung Chey, Youn-Hee Choi, Dohoon Lee, Yoosik Youm. (2024). A
+            Prospective Sociocentric Study of 2 Entire Traditional Korean Villages: The Korean Social Life, Health, and
+            Aging Project (KSHAP), American Journal of Epidemiology, 193(2): 241–255.
+            <a href="https://doi.org/10.1093/aje/kwad190" target="_blank" class="underline text-blue-600">
+              https://doi.org/10.1093/aje/kwad190
+            </a>
+          </p>
+
+          <p>
+            Park, H., Kim, H., Kwak, S, Youm, Y., &amp; Chey, J. (2023). Association between Loneliness and Memory
+            Function through White Matter Hyperintensities in Older Adults: The Moderating Role of Gender. Behavioral
+            Sciences, 13(10), 869.
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  </Features>
+</Layout>

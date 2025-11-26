@@ -27,16 +27,16 @@ export const headerData = {
       text: 'Publications',
       links: [
         {
+          text: 'All Publications',
+          href: getPermalink('/publications/allpub'),
+        },
+        {
           text: 'KSHAP',
           href: getPermalink('/publications/kshappub'),
         },
         {
           text: 'KSAH',
           href: getPermalink('/publications/ksahpub'),
-        },
-        {
-          text: 'Books & Book chapters',
-          href: getPermalink('/publications/books'),
         },
       ],
     },
@@ -64,10 +64,6 @@ export const headerData = {
           href: getPermalink('astro', 'tag'),
         },
       ],
-    },
-    {
-      text: 'Contact',
-      href: getPermalink('/contact'),
     },
   ],
 };

@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink} from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -73,8 +73,9 @@ export const headerData = {
 };
 
 export const footerData = {
-    links: [],
+  links: [],
   secondaryLinks: [],
   socialLinks: [],
-  footNote: 'Website template by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo<a/>',
+  footNote:
+    'Website template by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo<a/>',
 };

@@ -10,7 +10,6 @@ site:
 metadata:
   title:
     default: SNN Lab
-    template: '%s — AstroWind'
   description: "\U0001F680 SNN Lab Homepage."
 
 i18n:

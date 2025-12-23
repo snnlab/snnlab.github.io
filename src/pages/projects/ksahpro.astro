@@ -13,19 +13,50 @@ const metadata = {
 
   <Hero>
     <Fragment slot="title"> Projects: KSAH </Fragment>
+    <Fragment slot="subtitle">
+      <div style="display: flex; flex-direction: column; align-items: center; margin-top: 2rem;">
+        <img
+          src="/ksahlogo.png"
+          alt="KSAH Logo"
+          style="max-width: 420px; width: 100%; height: auto; margin-bottom: 1.5rem;"
+        />
+      </div>
+    </Fragment>
   </Hero>
 
   <!-- Features Widget *************** -->
 
   <Features classes={{ container: 'pt-0 mt-0 -mt-40' }} title="Korean Study of Adolescent Health(KSAH)">
     <Fragment slot="subtitle">
-      한국 청소년 건강연구(Korean Study of Adolescent Health, KSAH)는 한국의 여고생을 대상으로 2009년부터 2019년까지
-      매년 데이터를 수집한 연구입니다. 본 연구의 목적은 한국 아동과 청소년의 환경적 조건 및 주관적 행복감을 이해하고,
-      OECD 주요 국가들과의 비교를 통해 한국 사회의 문제점을 진단하며 그에 대한 정책적 대안을 모색하는 데 있습니다. 이
-      연구에서는 한국 청소년 삶의 질 지표 조사(Korean Child Well-Being Index Survey, KCWIS)를 활용하였습니다. 해당
-      조사는 방정환 재단(Foundation of Jungwhan Bang)의 지원으로 수행된 전국 대표 표본 연구입니다. 또한 본 연구는
-      한국에서 유일하게 여고생의 사회적 네트워크를 종단적으로 분석하는 연구로, 더 나아가 기능적 자기공명영상(fMRI,
-      functional Magnetic Resonance Imaging)을 활용하여 신경과학적 데이터를 함께 수집하고 있습니다.
+      The Korean Study of Adolescent Health (KSAH) is built on a uniquely rich longitudinal data infrastructure that
+      integrates genetic, neuroimaging, and complete social network information from multiple cohorts of Korean high
+      school students. The study combines genome-wide SNP data derived from saliva samples, repeated structural and
+      functional MRI scans capturing brain development and socioemotional processing, and real-name friendship networks
+      collected at multiple time points to track network formation and change. These biological and social data are
+      linked to repeated self-reported measures of mental health, including stress, anxiety, depression, problem
+      behaviors, suicidal ideation, and sleep quality. By synchronizing genetic predispositions, neural development, and
+      evolving peer relationships within a single cohort-based design, KSAH enables rigorous longitudinal and causal
+      analyses of adolescent mental health across multiple levels of explanation.
+
+      <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <strong>Official Links</strong>
+        <a
+          href="https://www.krm.or.kr/krmts/link.html?dbGubun=SD&m201_id=10100615&local_id=10114533"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="font-weight: 600; text-decoration: underline;"
+        >
+          National Research Foundation (NRF / KRM) Project Record
+        </a>
+        <a
+          href="https://ksah.yonsei.ac.kr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="font-weight: 600; text-decoration: underline;"
+        >
+          Official KSAH Project Website
+        </a>
+      </div>
     </Fragment>
   </Features>
 </Layout>

@@ -6,6 +6,331 @@ import Layout from '~/layouts/PageLayout.astro';
 const metadata = {
   title: 'SNN Lab All Publications',
 };
+
+// Data-driven publications
+// How to update later:
+// - Add a new item to `journalArticles` (and optionally `bookChapters`)
+// - The page will automatically re-group by year and render in descending order
+
+const journalArticles = [
+  {
+    year: 2025,
+    text: 'Baldina, E., Lee, S. H., Park, Y. R., Kim, H. C., & Youm*, Y. (2025). Educational attainment in sociocentric networks associates with cardiac biomarkers in Korean elders. Scientific Reports, 15(1), 1-11.',
+    url: 'https://doi.org/10.1038/s41598-025-16349-y',
+  },
+  {
+    year: 2025,
+    text: 'Baek, E. C., Shen, Y. L., Kim, H., Baldina, E., Chey, J., Youm*, Y., & Parkinson, C. (2025). Having more friends is associated with greater sensitization to social exclusion: Neural and behavioral evidence. Social Cognitive And Affective Neuroscience, 20(1): nsaf067.',
+    url: 'https://doi.org/10.1093/scan/nsaf067',
+  },
+  {
+    year: 2025,
+    text: 'Lee, S. H., Chey, J., Choi, I., Youm, Y., & Cole, S. (2025). Positive social relations, loneliness, and immune system gene regulation. Annals of the New York Academy of Sciences.',
+    url: 'https://doi.org/10.1111/nyas.15372',
+  },
+
+  {
+    year: 2024,
+    text: 'Baek, J., Baldina, E., Sung, K., Lee, S. H., Christakis, N. A., Bearman, P., ... & Youm, Y. (2024). A Prospective Sociocentric Study of 2 Entire Traditional Korean Villages: The Korean Social Life, Health, and Aging Project (KSHAP), American Journal of Epidemiology, 193(2): 241–255.',
+    url: 'https://doi.org/10.1093/aje/kwad190',
+  },
+
+  {
+    year: 2023,
+    text: 'Park, H., Kim, H., Kwak, S., Youm, Y., & Chey, J. (2023). Association between Loneliness and Memory Function through White Matter Hyperintensities in Older Adults: The Moderating Role of Gender. Behavioral Sciences, 13(10), 869.',
+  },
+  {
+    year: 2023,
+    text: 'Lee, S. H., Lee, H. H., Sung, K., Youm*, Y., & Kim, H. C. (2023). Association of group-level segregation with cardiovascular health in older adults: an analysis of data from the Korean Social Life, Health, and Aging Project. Epidemiology and Health, e2023041.',
+  },
+  {
+    year: 2023,
+    text: 'Lee, S. H., Chey, J., Ahn, W. Y., Woo, C. W., Youm, Y., Kim, H., ... & Choi, I. (2023). Psychological well‐being and salivary markers of inflammation: The moderating effect of age. Applied Psychology: Health and Well-Being. 15:466-478.',
+  },
+  {
+    year: 2023,
+    text: 'Kim, H., Kwak, S., Baek, E. C., Oh, N., Baldina, E., Youm*, Y., & Chey, J. (2023). Brain connectivity during social exclusion differs depending on the closeness within a triad among older adults living in a village. Social Cognitive and Affective Neuroscience, 18(1), nsad015.',
+  },
+  {
+    year: 2023,
+    text: 'Lee, S. H., Cole, S. W., Choi, I., Sung, K., Kim, S., Youm, Y., & Chey, J. (2023). Social network position and the Conserved Transcriptional Response to Adversity in older Koreans. Psychoneuroendocrinology, 155, 106342.',
+  },
+
+  {
+    year: 2021,
+    text: 'Kim, H., Kwak, S., Youm, Y., & Chey, J. (2021). Social Network Characteristics Predict Loneliness in Older Adults. Gerontology, 1-12.',
+    url: 'https://doi.org/10.1159/000516226',
+  },
+  {
+    year: 2021,
+    text: 'Kwak, S., Kim, H., Kim, H., Youm, Y., & Chey, J. (2021). Distributed functional connectivity predicts neuropsychological test performance among older adults. Human Brain Mapping, 42: 3305-3325.',
+    url: 'https://doi.org/10.1002/hbm.25436',
+  },
+  {
+    year: 2021,
+    text: 'Lee, Sung-Ha, Ekaterina Baldina, Eun Lee, and Yoosik Youm. (2021). Social connectedness and hair cortisol in community-dwelling older adults. Comprehensive Psychoneuroendocrinology, 6: 100053.',
+    url: 'https://doi.org/10.1016/j.cpnec.2021.100053',
+  },
+  {
+    year: 2021,
+    text: 'Youm, Y., Kim, J., Kwak, S., & Chey, J. (2021). Neural and social correlates of attitudinal brokerage: using the complete social networks of two entire villages. Proceedings of the Royal Society B, 288(1944): 20202866.',
+    url: 'https://doi.org/10.1098/rspb.2020.2866',
+  },
+  {
+    year: 2021,
+    text: 'Youm, Y., Lee, B., Kim, J. (2021). A measure of centrality in cyclic diffusion processes: Walk-betweenness. PLOS ONE, 16(1): e0245476.',
+    url: 'https://doi.org/10.1371/journal.pone.0245476',
+  },
+  {
+    year: 2021,
+    text: 'Youm, Y., Baldina, E., & Baek, J. (2021). All-cause mortality and three aspects of social relationships: an eight-year follow-up of older adults from one entire Korean village. Scientific Reports, 11(1): 1-11.',
+    url: 'https://doi.org/10.1038/s41598-020-80684-5',
+  },
+
+  {
+    year: 2020,
+    text: 'Hyon, R., Youm*, Y., Kim, J., Chey, J., Kwak, S., & Parkinson, C. (2020). Similarity in functional brain connectivity at rest predicts interpersonal closeness in the social network of an entire village. Proceedings of the National Academy of Sciences, 117(52): 33149-33160.',
+    url: 'https://doi.org/10.1073/pnas.2013606117',
+  },
+  {
+    year: 2020,
+    text: 'Kwak, M. S., Cho, S. M. J., Shim, J. S., Kim, D. J., Youm, Y., & Kim, H. C. (2020). Association of social network size and composition with physical activity in Korean middle-aged population. Epidemiology and Health, 42: e2020070.',
+    url: 'https://doi.org/10.4178/epih.e2020070',
+  },
+  {
+    year: 2020,
+    text: 'Park, K., Cho, D., Lee, E., Kim, J., Shim, J. S., Youm, Y., ... & Kim, H. C. (2020). Sex differences in the association between social relationships and insomnia symptoms. Journal of Clinical Sleep Medicine, 16(11): 1871-1881.',
+    url: 'https://doi.org/10.5664/jcsm.8710',
+  },
+  {
+    year: 2020,
+    text: 'Choi, J., Yang, K., Chu, S. H., Youm, Y., Kim, H. C., Park, Y. R., & Son, Y. J. (2020). Social Activities and Health-Related Quality of Life in Rural Older Adults in South Korea: A 4-Year Longitudinal Analysis. International Journal of Environmental Research and Public Health, 17(15), 5553.',
+    url: 'https://doi.org/10.3390/ijerph17155553',
+  },
+  {
+    year: 2020,
+    text: 'Lee, S., Lee, S., Lee, E., Youm, Y., Cho, H. S., & Kim, W. J. (2020). Gender differences in social network of cognitive function among community-dwelling older adults. Geriatrics & Gerontology International, 20(5), 467-473.',
+    url: 'https://doi.org/10.1111/ggi.13906',
+  },
+  {
+    year: 2020,
+    text: 'Choi, Hye Rin, Tyler Hyungtaek Rim, Jung Hyun Lee, Seung Won Lee, Jongmin Baek, Kwanghyun Kim, Yoosik Youm, and Hyeon Chang Kim. (2020). Prevalence of and factors related with abnormal fundoscopic findings among the elderly population in a rural community in South Korea. Seminars in Ophthalmology 35(1): 41-49.',
+    url: 'https://doi.org/10.1080/08820538.2020.1722182',
+  },
+
+  {
+    year: 2019,
+    text: 'Bang, M., Kim, J., An, S. K., Youm, Y., Chey, J., Kim, H. C., ... & Lee, E. (2019). Associations of systemic inflammation with frontotemporal functional network connectivity and out-degree social-network size in community-dwelling older adults. Brain, behavior, and immunity.',
+    url: 'https://doi.org/10.1016/j.bbi.2019.01.025',
+  },
+  {
+    year: 2019,
+    text: 'Choi, H. R., Lee, S. W., Jeon, D. H., Hur, N. W., Youm, Y., & Kim, H. C. (2019). Association between estimated glomerular filtration rate (eGFR) and asymmetric dimethylarginine (ADMA) concentrations among the elderly in a rural community: a cross-sectional study. BMC Geriatrics, 19(1), 1-9.',
+    url: 'https://doi.org/10.1186/s12877-019-1388-4',
+  },
+  {
+    year: 2019,
+    text: 'Kim, H., Kwak, S., Kim, J., Youm*, Y., & Chey, J. (2019). Social Network position Moderates the Relationship between Late-life Depressive symptoms and Memory Differently in Men and Women. Scientific Reports, 9(1), 6142.',
+    url: 'https://doi.org/10.1038/s41598-019-42388-3',
+  },
+
+  {
+    year: 2018,
+    text: 'Hur, N. W., Kim, H. C., Waite, L., and Youm, Y. (2018). Is the Relationship between Depression and C Reactive Protein Level Moderated by Social Support in Elderly? - Korean Social Life, Health, and Aging Project (KSHAP). Psychiatry Investigation, 15(1), 24-33.',
+    url: 'https://doi.org/10.4306/pi.2018.15.1.24',
+  },
+  {
+    year: 2018,
+    text: 'Joo, W. T., Lee, C. J., Oh, J., Kim, I. C., Lee, S. H., Kang, S. M., ... & Youm, Y. (2018). The association between social network betweenness and coronary calcium: A baseline study of patients with a high risk of cardiovascular disease. Journal of Atherosclerosis and Thrombosis, 40469.',
+    url: 'https://doi.org/10.5551/jat.40469',
+  },
+  {
+    year: 2018,
+    text: 'Kwak, S., Joo, W. T., Youm*, Y., and Chey, J. (2018). Social brain volume is associated with in-degree social network size among older adults. Proceedings of the Royal Society B, 285(1871), 20172708.',
+    url: 'https://doi.org/10.1098/rspb.2017.2708',
+  },
+  {
+    year: 2018,
+    text: 'Kwak, S., Kim, H., Chey, J., and Youm, Y. (2018). Feeling how old I am: Subjective age is associated with estimated brain age. Frontiers in Aging Neuroscience, 10, 168.',
+    url: 'https://doi.org/10.3389/fnagi.2018.00168',
+  },
+  {
+    year: 2018,
+    text: 'Youm*, Y., Lee, S., and Baldina, E. (2018). Association Between Social Support and Bone Health Outcomes: a Systematic Review. Clinical Reviews in Bone and Mineral Metabolism, 1-13.',
+    url: 'https://doi.org/10.1007/s12018-018-9248-x',
+  },
+
+  {
+    year: 2017,
+    text: 'Sohn, S. Y., Joo, W. T., Kim, W. J., Kim, S. J., Youm, Y., Kim, H. C., ... & Lee, E. (2017). Social network types among older Korean adults: Associations with subjective health. Social Science & Medicine, 173, 88-95.',
+    url: 'https://doi.org/10.1016/j.socscimed.2016.11.042',
+  },
+  {
+    year: 2017,
+    text: 'Lee, S., Youm*, Y., Kim, H., Kwak, S., & Chey, J. (2017). Homophily of Older Adults Based on Amygdala Volume. New Physics: Sae Mulli 67, 595.',
+    url: 'https://doi.org/10.3938/NPSM.67.595',
+  },
+  {
+    year: 2017,
+    text: 'Joo, W. T., Kwak, S., Youm*, Y., & Chey, J. (2017). Brain functional connectivity difference in the complete network of an entire village: the role of social network size and embeddedness. Scientific Reports, 7.',
+    url: 'https://doi.org/10.1038/s41598-017-04904-1',
+  },
+  {
+    year: 2017,
+    text: 'Lee, E. Y., Lee, S. J., Kim, K. M., Yun, Y. M., Song, B. M., Kim, J. E., Kim, H. C., Rhee, Y., Youm, Y., and Kim, C. O. (2017). Association of metabolic syndrome and 25-hydroxyvitamin D with cognitive impairment among elderly Koreans. Geriatrics & Gerontology International, 17(7), 1069-1075.',
+    url: 'https://doi.org/10.1111/ggi.12826',
+  },
+  {
+    year: 2017,
+    text: 'Kim, W. J., Joo, W. T., Baek, J., Sohn, S. Y., Namkoong, K., Youm, Y., Kim, H. C., Park, Y. R., Chu, S. H., and Lee, E. (2017). Factors Associated with Insomnia among the Elderly in a Korean Rural Community. Psychiatry Investigation, 14(4), 400-406.',
+    url: 'https://doi.org/10.4306/pi.2017.14.4.400',
+  },
+  {
+    year: 2017,
+    text: 'Choi, H. R., Lee, S. W., Yeom, H., Jeon, D. H., Kim, H. C., and Youm, Y. (2017). Association between vitamin D status and asymmetric dimethylarginine (ADMA) concentration in the Korean elderly population. Maturitas, 102, 13-17.',
+    url: 'https://doi.org/10.1016/j.maturitas.2017.05.002',
+  },
+
+  {
+    year: 2016,
+    text: 'Song, B. M., Kim, H. C., Rhee, Y., Youm, Y., & Kim, C. O. (2016). Association between serum 25-hydroxyvitamin D concentrations and depressive symptoms in an older Korean population: A cross-sectional study. Journal of Affective Disorders, 189, 357-364.',
+    url: 'https://doi.org/10.1016/j.jad.2015.09.043',
+  },
+  {
+    year: 2016,
+    text: 'Lee, E. Y., Lee, S. J., Kim, K. M., Yun, Y. M., Song, B. M., Kim, J. E., ... & Kim, C. O. (2016). Association of metabolic syndrome and 25-hydroxyvitamin D with cognitive impairment among elderly Koreans. Geriatrics & Gerontology International.',
+    url: 'https://doi.org/10.1111/ggi.12826',
+  },
+  {
+    year: 2016,
+    text: 'Baek, J., Hur, N. W., Kim, H. C., & Youm, Y. (2016). Sex-specific effects of social networks on the prevalence, awareness, and control of hypertension among older Korean adults. Journal of Geriatric Cardiology: JGC, 13(7), 580.',
+    url: 'https://doi.org/10.11909/j.issn.16715411.2016.07.005',
+  },
+  {
+    year: 2016,
+    text: 'Youm*, Y., & Sung, K. (2016). Self-rated Health and Global Network Position: Results From the Older Adult Population of a Korean Rural Village. Annals of Geriatric Medicine and Research, 20(3), 149-159.',
+    url: 'https://doi.org/10.4235/agmr.2016.20.3.149',
+  },
+
+  {
+    year: 2015,
+    text: 'Chu, Sang Hui, Ji Won Baek, Eun Sook Kim, Katherine M. Stefani, Won Joon Lee, Yeong-Ran Park, Yoosik Youm, and Hyeon Chang Kim. (2015). Gender Differences in Hypertension Control among Korean Older Adults. Journal of Preventive Medicine and Public Health. 48(1): 38-47.',
+    url: 'https://doi.org/10.3961/jpmph.14.043',
+  },
+  {
+    year: 2015,
+    text: 'Song, Bo Mi, Ju-Mi Lee, Wungrak Choi, Yoosik Youm, Sang Hui Chu, Yeong-Ran Park, and Hyeon Chang Kim. (2015). Association between C reactive protein level and depressive symptoms in an elderly Korean population: Korean Social Life, Health and Aging Project. BMJ Open 5, no. 2 (2015): e006429.',
+    url: 'https://doi.org/10.1136/bmjopen-2014-006429',
+  },
+  {
+    year: 2015,
+    text: 'Lee, Seung Won, Yoosik Youm, Won Joon Lee, Wungrak Choi, Sang Hui Chu, Yeong-Ran Park, and Hyeon Chang Kim. (2015). Appendicular Skeletal Muscle Mass and Insulin Resistance in an Elderly Korean Population: The Korean Social Life, Health and Aging Project-Health Examination Cohort. Diabetes & Metabolism Journal 39, no. 1 (2015): 37-45.',
+    url: 'https://doi.org/10.4093/dmj.2015.39.1.37',
+  },
+
+  {
+    year: 2014,
+    text: 'Lee, S. W., Youm, Y., Kim, C. O., Lee, W. J., Choi, W., Chu, S. H., ... & Kim, H. C. (2014). Association between skeletal muscle mass and radial augmentation index in an elderly Korean population. Archives of Gerontology and Geriatrics, 59(1), 49-55.',
+    url: 'https://doi.org/10.1016/j.archger.2014.01.008',
+  },
+  {
+    year: 2014,
+    text: 'Lee, J. M., Lee, W. J., Kim, H. C., Choi, W., Lee, J., Sung, K., Chu, S. H., Park, Y. R., and Youm, Y. (2014). The Korean social life, health and aging project-health examination cohort. Epidemiology and Health, 36.',
+    url: 'https://doi.org/10.4178/epih/e2014003',
+  },
+  {
+    year: 2014,
+    text: 'Youm*, Y., Laumann, E. O., Ferraro, K. F., Waite, L. J., Kim, H. C., Park, Y. R., ... & Lee, J. A. (2014). Social network properties and self-rated health in later life: comparisons from the Korean social life, health, and aging project and the national social life, health and aging project. BMC Geriatrics, 14(1), 102.',
+    url: 'https://doi.org/10.1186/1471-2318-14-102',
+  },
+
+  {
+    year: 2013,
+    text: 'Lee, W. J., Youm, Y., Rhee, Y., Park, Y. R., Chu, S. H., & Kim, H. C. (2013). Social network characteristics and body mass index in an elderly Korean population. Journal of Preventive Medicine and Public Health, 46(6), 336-345.',
+    url: 'https://doi.org/10.3961/jpmph.2013.46.6.336',
+  },
+
+  {
+    year: 2011,
+    text: 'Youm*, Yoosik, Byungkyu Lee. (2011). Social Network Effects on Post-Traumatic Stress Disorder (PTSD) in Female North Korean Immigrants. Journal of Preventive Medicine and Public Health 44(5): 191-200.',
+    url: 'https://doi.org/10.3961/jpmph.2011.44.5.191',
+  },
+  {
+    year: 2011,
+    text: 'Yoosik Youm*, Hyojeong Seo. (2011). Latent Classes of Social Closure and Their Effects on the Subjective Well-being among Korean Adolescents. Korean Journal of Sociology 45(3): 101-124.',
+  },
+
+  {
+    year: 2010,
+    text: 'Youm*, Yoosik. (2010). A sociological interpretation of emerging properties in STI transmission dynamics: walk-betweeness of sexual networks. Sexually Transmitted Infections. 86(3): iii24-iii28.',
+    url: 'http://dx.doi.org/10.1136/sti.2010.044008',
+  },
+
+  {
+    year: 2009,
+    text: 'Youm, Y., Mackesy-Amiti, M. E., Williams, C. T., and Ouellet, L. J. (2009). Identifying hidden sexual bridging communities in Chicago. Journal of Urban Health, 86(1), 107-120.',
+    url: 'https://doi.org/10.1007/s11524-009-9371-6',
+  },
+
+  {
+    year: 2007,
+    text: 'Youm*, Yoosik., Chanung Park. (2007). On the Relationship between Self-reported Physical Health and Social Networks: Among Korean Junior High School Students. Development and Society. S221-S226.',
+    url: 'https://doi.org/10.1002/bit.260340419',
+  },
+
+  {
+    year: 2003,
+    text: 'Youm*, Yoosik, and Edward O. Laumann. (2003). The effect of structural embeddedness on the division of household labor: A game-theoretic model using a network approach. Rationality and Society. 15(2): 243–280.',
+    url: 'https://doi.org/10.1177/1043463103015002004',
+  },
+
+  {
+    year: 2002,
+    text: 'Youm, Yoosik, and Edward O. Laumann. (2002). Social Network Effects on the Transmission of Sexually Transmitted Diseases. Sexually Transmitted Diseases 29(11): 689-697.',
+    url: 'https://doi.org/10.1097/00007435-200211000-00012',
+  },
+
+  {
+    year: 1999,
+    text: 'Laumann, Edward O., and Yoosik Youm. (1999). Race/ethnic group differences in the prevalence of sexually transmitted diseases in the United States: A Network Explanation. Sexually Transmitted Diseases. Vol 26. No 5: 250-61.',
+    url: 'https://doi.org/10.1097/00007435-199905000-00003',
+  },
+];
+
+const bookChapters = [
+  {
+    text: 'Youm, Y., Laumann, E. O., Lee, K. (2018). Changes of Personal Network Configuration Over the Life Course in the USA: A Latent Class Approach. In: Alwin D., Felmlee D., Kreager D. (eds) Social Networks and the Life Course. Frontiers in Sociology and Social Research, vol 2. Springer, Cham',
+  },
+  {
+    text: 'Youm, Y. (2015). Sexually Transmitted Infections: Social Network Analysis. International Encyclopedia of the Social & Behavioral Sciences, 2nd edition, Vol 21. Oxford: Elsevier. pp. 853-861.',
+  },
+  {
+    text: 'Laumann, E. O., Mahay, J., & Youm, Y. (2007). Sex, intimacy and family life in the United States. The Sexual Self, 165-190.',
+  },
+  {
+    text: 'Youm, Y. (2005). Household behavior and family economics. Encyclopedia of Social Measurements, 243-248.',
+  },
+  {
+    text: 'Youm, Y., & Paik, A. (2004). The sex market and its implications for family formation. The sexual organization of the city, 165-193.',
+  },
+  {
+    text: 'Youm, Y., & Laumann, E. O. (2004). Social networks and STDs. The sexual organization of the city, 227-279.',
+  },
+  {
+    text: 'Laumann, E. O., Ellingson, S. E., Mahay, J. E., Paik, A. E., & Youm, Y. E. (2004). The sexual organization of the city. University of Chicago Press.',
+  },
+  {
+    text: 'Laumann, E., Mahay, J., Paik, A., & Youm, Y. (2004). Network data collection and its relevance for the analysis of STDs: the NHSLS and CHSLS. Network epidemiology: A handbook for survey design and data collection, 27-41.',
+  },
+  {
+    text: 'Laumann, Edward O., and Yoosik Youm. (2001). Racial/Ethnic Group Differences in the Prevalence of Sexually Transmitted Diseases in the United States: A Network Explanation. Sex, love, and health in America: Private Choices and Public Policies. Chicago: University of Chicago Press, 327-351.',
+  },
+  {
+    text: 'Laumann, E. O., & Youm, Y. (2001). Sexual expression in America. Sex, love, and health in America: Private Choices and Public Policies. Chicago: University of Chicago Press, 109-148.',
+  },
+];
+
+const yearsDesc = Array.from(new Set(journalArticles.map((p) => p.year))).sort((a, b) => b - a);
 ---
 
 <Layout metadata={metadata}>
@@ -21,26 +346,39 @@ const metadata = {
     <Fragment slot="title">
       <span class="text-3xl font-semibold">Peer-Reviewed Journal Articles</span>
     </Fragment>
+
     <Fragment slot="subtitle">
       <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">2024</h2>
+        {
+          yearsDesc.map((year) => (
+            <div class="mb-10">
+              <h2 class="text-2xl font-semibold mb-4">{year}</h2>
+              <div class="space-y-4 text-sm">
+                {journalArticles
+                  .filter((p) => p.year === year)
+                  .map((p) => (
+                    <p>
+                      {p.text}
+                      {p.url && (
+                        <>
+                          {' '}
+                          <a href={p.url} target="_blank" class="underline text-blue-600">
+                            {p.url}
+                          </a>
+                        </>
+                      )}
+                    </p>
+                  ))}
+              </div>
+            </div>
+          ))
+        }
 
-        <div class="space-y-4 text-sm">
-          <p>
-            Jiwon Baek, Ekaterina Baldina, Kiho Sung, Sung-Ha Lee, Nicholas A Christakis, Peter Bearman, Hyeon Chang
-            Kim, Sang Hui Chu, Eun Lee, Yeong-Ran Park, Jeanyung Chey, Youn-Hee Choi, Dohoon Lee, Yoosik Youm. (2024). A
-            Prospective Sociocentric Study of 2 Entire Traditional Korean Villages: The Korean Social Life, Health, and
-            Aging Project (KSHAP), American Journal of Epidemiology, 193(2): 241–255.
-            <a href="https://doi.org/10.1093/aje/kwad190" target="_blank" class="underline text-blue-600">
-              https://doi.org/10.1093/aje/kwad190
-            </a>
-          </p>
-
-          <p>
-            Park, H., Kim, H., Kwak, S, Youm, Y., &amp; Chey, J. (2023). Association between Loneliness and Memory
-            Function through White Matter Hyperintensities in Older Adults: The Moderating Role of Gender. Behavioral
-            Sciences, 13(10), 869.
-          </p>
+        <div class="mt-14">
+          <h2 class="text-2xl font-semibold mb-4">Books &amp; Book Chapters</h2>
+          <div class="space-y-4 text-sm">
+            {bookChapters.map((b) => <p>{b.text}</p>)}
+          </div>
         </div>
       </div>
     </Fragment>

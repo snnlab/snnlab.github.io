@@ -45,10 +45,6 @@
     text-indent: 1em;
     margin-bottom: 1.25rem;
   }
-
-  .ksah-description p:first-child {
-    text-indent: 1em;
-  }
 }
 
 #header.scroll > div:first-child {

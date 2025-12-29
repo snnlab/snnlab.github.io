@@ -28,32 +28,57 @@ const metadata = {
 
   <Features classes={{ container: 'pt-0 mt-0 -mt-40' }} title="Korean Study of Adolescent Health(KSAH)">
     <Fragment slot="subtitle">
-      The Korean Study of Adolescent Health (KSAH) is built on a uniquely rich longitudinal data infrastructure that
-      integrates genetic, neuroimaging, and complete social network information from multiple cohorts of a Korean girl's
-      high school students. The study combines genome-wide SNP data derived from saliva samples, repeated structural and
-      functional MRI scans capturing brain development and socioemotional processing, and real-name friendship networks
-      collected at multiple time points to track network formation and change. These biological and social data are
-      linked to repeated self-reported measures of mental health, including stress, anxiety, depression, problem
-      behaviors, suicidal ideation, and sleep quality. By synchronizing genetic predispositions, neural development, and
-      evolving peer relationships within a single cohort-based design, KSAH enables rigorous longitudinal and causal
-      analyses of adolescent mental health across multiple levels of explanation.
+      <div class="ksah-description">
+        <p style="margin-bottom: 1.25rem;">
+          The Korean Study of Adolescent Health (KSAH) is a cohort-based longitudinal study that integrates sociogenomic
+          data, repeated neuroimaging, and sociocentric peer-network measures with repeated assessments of adolescent
+          mental health and related psychosocial characteristics. KSAH is designed as a multi-level research
+          infrastructure that supports longitudinal analyses of how genetic predispositions, neurodevelopmental
+          processes, and dynamic peer relationships jointly shape a broad range of outcomes, including subjective
+          well-being, perceived stress, anxiety and depressive symptoms, sleep and eating-related problems, and other
+          domains of adolescent adjustment.
+        </p>
+
+        <p style="margin-bottom: 1.25rem;">
+          KSAH comprises two primary cohorts (Cohort 22 and Cohort 23) recruited from a single-sex girls’ high school,
+          with repeated survey waves conducted during the high-school period and planned follow-up into emerging
+          adulthood. Baseline data collection is implemented in the school setting, complemented by face-to-face
+          interviews and mobile-based follow-up surveys. Genomic DNA is collected via an in-person protocol. The survey
+          instrument covers not only mental health but also family and educational contexts, validated psychological
+          scales, and a wide range of psychosocial attitudes and beliefs.
+        </p>
+
+        <p style="margin-bottom: 1.25rem;">
+          To characterize adolescents’ social environments, KSAH employs a discussion-network name generator (up to
+          seven alters) that records real names and in-school identifiers (e.g., grade/class), enabling the
+          reconstruction of grade-level sociocentric networks and the analysis of network change over time. These
+          social-network data are paired with repeated MRI sessions that include structural imaging (e.g., T1-weighted
+          and diffusion imaging) and functional imaging (resting-state and multiple task paradigms, including
+          face-viewing and naturalistic movie-watching). Together, these modalities provide an integrated platform for
+          investigating how peer social structure and social-cognitive processes are instantiated in the brain and how
+          they relate to trajectories of mental health across adolescence.
+        </p>
+      </div>
 
       <h3 style="margin-top: 2.5rem;">[Key Data Components]</h3>
 
       <ul style="margin-top: 1rem; padding-left: 1.25rem;">
         <li style="margin-bottom: 1.25rem;">
-          <strong>Genetics</strong>
+          <strong>1) Genetics</strong>
           <ul style="margin-top: 0.5rem; padding-left: 1.6rem;">
-            <li style="margin-bottom: 0.4rem;">- Saliva samples collected from over 130 participants</li>
+            <li style="margin-bottom: 0.4rem;">
+              - DNA collection via oral epithelial cell swabs from inside the cheeks (kit-based protocol) (N = 235, 2
+              cohorts)
+            </li>
             <li style="margin-bottom: 0.4rem;">
               - Genome-wide SNP data (~500,000 variants) using Korean-optimized genotyping arrays
             </li>
-            <li style="margin-bottom: 0.4rem;">- Polygenic Risk Scores (PRS) calculated using GWAS methods</li>
+            <li style="margin-bottom: 0.4rem;">- Polygenic risk scores (PRS) derived from GWAS summary statistics</li>
           </ul>
         </li>
 
         <li style="margin-bottom: 1.25rem;">
-          <strong>Brain Imaging</strong>
+          <strong>2) Brain Imaging</strong>
           <ul style="margin-top: 0.5rem; padding-left: 1.6rem;">
             <li style="margin-bottom: 0.4rem;">
               - Structural MRI (T1, DTI) and functional MRI (resting-state and task-based)
@@ -61,15 +86,19 @@ const metadata = {
             <li style="margin-bottom: 0.4rem;">
               - Face-viewing and movie-watching paradigms to capture social and emotional processing
             </li>
+            <li style="margin-bottom: 0.4rem;">
+              - More psychological experiments inside MRI scanner: gamble, prosocial learning, social distancing, etc.
+            </li>
             <li style="margin-bottom: 0.4rem;">- Repeated measurements enabling developmental trajectory analysis</li>
           </ul>
         </li>
 
         <li style="margin-bottom: 1.25rem;">
-          <strong>Social Network Data</strong>
+          <strong>3) Social Network Data</strong>
           <ul style="margin-top: 0.5rem; padding-left: 1.6rem;">
             <li style="margin-bottom: 0.4rem;">
-              - Complete, real-name friendship networks collected through repeated surveys
+              - Real-name peer discussion networks (name generator) enabling grade-level sociocentric reconstruction,
+              complemented by in-school relationship measures (e.g., popularity/negative ties).
             </li>
             <li style="margin-bottom: 0.4rem;">
               - Longitudinal network tracking of network dynamics, reciprocity, and structural change
@@ -78,12 +107,19 @@ const metadata = {
         </li>
 
         <li style="margin-bottom: 1.25rem;">
-          <strong>Mental Health Measures</strong>
+          <strong>4) Mental Health Measures</strong>
           <ul style="margin-top: 0.5rem; padding-left: 1.6rem;">
             <li style="margin-bottom: 0.4rem;">
-              - Self-reported indicators of stress, anxiety, depression, problem behaviors
+              - Repeated measures of core mental health domains—depressive symptoms (PHQ-9), anxiety (GAD-7), perceived
+              stress (PSS-10), and eating-disorder—given their prominence among female adolescents
             </li>
-            <li style="margin-bottom: 0.4rem;">- Measures of suicidal ideation and sleep quality</li>
+            <li style="margin-bottom: 0.4rem;">
+              - Additional assessments on alcohol use, cigarette smoking, and insomnia from emerging adulthood onward
+            </li>
+            <li style="margin-bottom: 0.4rem;">
+              - Tracking changes in happiness and broader subjective well-being alongside mental health outcomes across
+              the entire study period
+            </li>
           </ul>
         </li>
       </ul>

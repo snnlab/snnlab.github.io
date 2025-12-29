@@ -90,3 +90,21 @@
 .dd *:first-child {
   margin-top: 0;
 }
+
+@layer components {
+  .ksah-description p {
+    text-indent: 1em;
+    margin-bottom: 1.25rem;
+  }
+
+  .ksah-description p:first-child {
+    text-indent: 1em;
+    /* optional: APA style */
+  }
+}
+
+@layer components {
+  .ksah-description {
+    @apply text-lg leading-relaxed;
+  }
+}

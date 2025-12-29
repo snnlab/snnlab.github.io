@@ -36,6 +36,20 @@
   .btn-tertiary {
     @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
   }
+
+  .ksah-description {
+    @apply text-lg leading-relaxed;
+  }
+
+  .ksah-description p {
+    text-indent: 1em;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Optional: APA style (no indent on the first paragraph) */
+  .ksah-description p:first-child {
+    text-indent: 0;
+  }
 }
 
 #header.scroll > div:first-child {
@@ -89,22 +103,4 @@
 
 .dd *:first-child {
   margin-top: 0;
-}
-
-@layer components {
-  .ksah-description p {
-    text-indent: 1em;
-    margin-bottom: 1.25rem;
-  }
-
-  .ksah-description p:first-child {
-    text-indent: 1em;
-    /* optional: APA style */
-  }
-}
-
-@layer components {
-  .ksah-description {
-    @apply text-lg leading-relaxed;
-  }
 }

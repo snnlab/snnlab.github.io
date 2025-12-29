@@ -46,9 +46,8 @@
     margin-bottom: 1.25rem;
   }
 
-  /* Optional: APA style (no indent on the first paragraph) */
   .ksah-description p:first-child {
-    text-indent: 0;
+    text-indent: 1em;
   }
 }
 

@@ -1,6 +1,7 @@
 ---
 title: '2026 KSHAP Data Fair'
 publishDate: 2026-02-04
+image: https://raw.githubusercontent.com/snnlab/snnlab.github.io/main/public/blogpost/kshapdatafair.png
 tags: ['data']
 ---
 

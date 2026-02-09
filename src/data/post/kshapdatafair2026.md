@@ -1,7 +1,7 @@
 ---
 title: '2026 KSHAP Data Fair'
 publishDate: 2026-02-04
-tags:
+tags: ['data']
 ---
 
 ## 2026 KSHAP Data Fair

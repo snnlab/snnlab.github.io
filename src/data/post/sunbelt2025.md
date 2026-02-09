@@ -1,5 +1,6 @@
 ---
 title: '2025 INSNA Sunbelt Paris Conference'
+publishDate: 2025-07-01
 tags: ['conference']
 ---
 

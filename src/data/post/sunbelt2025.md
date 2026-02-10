@@ -1,7 +1,7 @@
 ---
 title: '2025 INSNA Sunbelt Paris Conference'
 publishDate: 2025-07-01
-image: https://raw.githubusercontent.com/snnlab/snnlab.github.io/main/public/blogpost/sunbelt2025.jpeg
+image: ~/assets/images/blogpost/sunbelt2025.jpeg
 tags: ['conference']
 ---
 

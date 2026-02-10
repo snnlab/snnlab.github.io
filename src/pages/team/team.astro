@@ -7,6 +7,166 @@ const metadata = {
   title: 'SNN Lab Team',
 };
 
+// -----------------------------
+// Teammate
+// -----------------------------
+
+/** @typedef {{ label: string; href: string }} Link */
+/** @typedef {{ name: string; title?: string; image?: string; bio: string; metaLines: string[]; links: Link[] }} Person */
+
+/** @type {{
+ *  labDirector: Person;
+ *  researchProfessors: Person[];
+ *  graduateStudents: Person[];
+ *  researchAssistants: Person[];
+ * }} */
+
+const people = {
+  labDirector: {
+    name: 'Yoosik Youm',
+    title: 'Principal Investigator',
+    image: '/team/prof_youm.jpg',
+    metaLines: ['Office: Widang Hall #507', 'Department of Sociology, Yonsei University'],
+    bio: `Yoosik Youm is the Underwood Distinguished Professor of Sociology at Yonsei University, South Korea, where
+he specializes in social network analysis, medical sociology, and social neuroscience. His research
+investigates the intricate relationships between social networks, brain structure and connectivity, and
+physical or psychological health outcomes across the lifespan. Professor Youm currently directs two
+longitudinal studies: the Korean Social Life, Health, and Aging Project (KSHAP) and the Korean Study of
+Adolescent Health (KSAH). KSHAP, initiated in 2011, examines sociocentric networks and biomarkers, including
+brain MRI scans, among older adults in rural Korean villages, revealing insights such as the association
+between social network positions and brain volume or connectivity. KSAH, initiated in 2021, focuses on high
+school students in Seoul, exploring how social networks emerge through the co-evolution of social
+connections and (dis)similar neural patterns. The study follows participants from their freshman year until
+graduation across several waves of data collection. Professor Youm earned his Ph.D. in Sociology at the
+University of Chicago and held faculty positions at the University of Illinois at Chicago before joining
+Yonsei University.`,
+    links: [
+      { label: 'Personal Homepage', href: 'https://sites.google.com/view/yoosik/' },
+      { label: 'Email', href: 'mailto:yoosik@yonsei.ac.kr' },
+      { label: 'CV', href: 'https://drive.google.com/file/d/1Z2RRWAqqb_1B9d82POe4U9CIGyHi_dfM/view' },
+    ],
+  },
+
+  researchProfessors: [
+    {
+      name: 'Won-Gyo Shin',
+      title: 'Ph.D.',
+      metaLines: [],
+      image: '/team/doc_shin.png',
+      bio: `Won-Gyo recently joined the SNN Lab. She earned her B.A. in Psychology from Sungkyunkwan University and her
+M.S. and Ph.D. in Cognitive Science and Brain & Cognitive Sciences from Seoul National University. She
+then worked as a postdoctoral researcher at the Social Cognitive Neuroscience Lab at the University of
+Chicago and the Social Neuroscience Lab at Pusan National University. Her research explores how social and
+non-social resources are associated with human mind and behavior, utilizing behavioral, neuroimaging, and
+social network data.`,
+      links: [{ label: 'Email', href: 'mailto:wongyo.erica.shin@gmail.com' }],
+    },
+    {
+      name: 'Ahhyun Cho',
+      title: 'Ph.D.',
+      metaLines: [],
+      image: '/team/doc_cho.jpg',
+      bio: `Ahhyun Cho is a postdoctoral researcher in the Department of Sociology at Yonsei University. Her research
+interests include health inequality, immigrant adaptation, gender, social capital, and quantitative methods.
+In her doctoral dissertation, she conducted an empirical analysis using longitudinal data on multicultural
+adolescents in Korea to examine patterns of social capital at the individual and family levels and their
+relationship to health disparities. She has presented her research at domestic and international academic
+conferences, including the Korean Sociological Association, the Korean Population Association, and
+ANPOR-APCA. Her work has been published in SSCI journals such as the International Journal of Intercultural
+Relations, Cross- Cultural Research, and Applied Research in Quality of Life. She holds a BA, MA, and PhD
+from Ewha Woman’s University.`,
+      links: [{ label: 'Email', href: 'mailto:choahere@gmail.com' }],
+    },
+    {
+      name: 'Sang Hee Lee',
+      title: 'Ph.D.',
+      metaLines: [],
+      image: '/team/doc_lee.jpg',
+      bio: `Sang Hee Lee is a post doctoral researcher in the Department of Sociology at Yonsei University. Previously,
+she received her B.A. in Chinese Language and Literature from Ewha Woman’s University and M.A. in
+International Studies from Seoul National University, after which she worked as a researcher specializing in
+Chinese economic policy. Recognizing the limitations of state and capital centered perspectives in
+addressing lived social realities, she returned to Ewha Womans University to pursue an integrated M.S./Ph.D.
+in Social Welfare. She is interested in the dual mechanisms of social capital and its role in both
+exacerbating inequality and enabling policy intervention, with an emphasis on welfare policy design and
+public welfare attitudes when implementing policies.`,
+      links: [{ label: 'Email', href: 'mailto:shl25@yonsei.ac.kr' }],
+    },
+  ],
+
+  graduateStudents: [
+    {
+      name: 'Kiho Sung',
+      title: undefined,
+      metaLines: [],
+      image: '/team/grad_sung.jpg',
+      bio: `Kiho earned his B.A. and M.A. in Sociology from Yonsei University and is currently pursuing a Ph.D. in the
+same field. His research examines how the structure of social relationships shapes health outcomes across
+the life course. He also explores the neural foundations of social behavior and the social basis of brain
+function by integrating socio-centric network analysis with neuroimaging. Recently, his work has focused on
+the intersection of social science and artificial intelligence, investigating how AI can enhance social
+research and how social data science can offer new insights to academia and society.`,
+      links: [
+        { label: 'Email', href: 'mailto:kihosung@yonsei.ac.kr' },
+        { label: 'CV', href: 'https://drive.google.com/file/d/19IEvlNIOeHkatIsWigXmK3FXwNKJFVSO/view' },
+      ],
+    },
+    {
+      name: 'Gayoung Choi',
+      title: undefined,
+      metaLines: [],
+      image: '/team/grad_choi.jpg',
+      bio: `Gayoung is currently a post-master’s researcher at the SNN Lab. During her master’s studies, she employed
+causal mediation analysis and hierarchical linear modeling to investigate the relationship between social
+conditions and individual inequalities among older adults. Her recent research focuses on utilizing
+computational analysis methods to explore how social networks and knowledge influence individuals’
+self-perception and knowledge formation. Prior to joining the SNN Lab, she earned both her B.A. and M.A. in
+Sociology from Sungkyunkwan University.`,
+      links: [{ label: 'Email', href: 'mailto:gayoungchoi@yonsei.ac.kr' }],
+    },
+  ],
+
+  researchAssistants: [
+    {
+      name: 'Hyunseo Cho',
+      title: undefined,
+      metaLines: [],
+      image: '/team/und_cho.jpg',
+      bio: `Hyunseo Cho is a fourth-year undergraduate student double-majoring in Sociology and Computer Science at Yonsei University. She is interested in network science and computational sociology, with a focus on network brokerage, information diffusion, and longitudinal network dynamics. Her current work applies computational methods to examine how network structures such as brokerage and cohesion shape social behavior and culture. She aims to contribute to data-driven, human-centered technologies for social good at the intersection of sociology and computation.`,
+      links: [{ label: 'Email', href: 'mailto:echosounds59@gmail.com' }],
+    },
+    {
+      name: 'Chaeeun Kim',
+      title: undefined,
+      metaLines: [],
+      image: '/team/und_kim.jpg',
+      bio: `Chaeun Kim is a fourth-year undergraduate researcher in Sociology at Yonsei University, majoring in
+Sociology. Her primary research interests include neuroscience and crime sociology. Specifically, she is
+interested in how post-victimization processing and acceptance of criminal experiences may relate to
+differences in neural activation patterns and variations in social network structure. Her research explores
+brain-computer interfacing and network-based approaches to crime, victimization, and neuro-social activation
+mechanisms.`,
+      links: [{ label: 'Email', href: 'mailto:chaeeunkim088@gmail.com' }],
+    },
+    {
+      name: 'Hyunseo Yoon',
+      title: undefined,
+      metaLines: [],
+      image: '/team/und_yun.jpg',
+      bio: `Hyunseo Yoon is a second-year undergraduate researcher in Sociology at Yonsei University. Her primary
+research interests lie in quantitative social analysis of social networks. She is primarily committed to
+transforming social structures into measurable and visualizable data to examine structural conditions and
+its process in shaping individual and collective outcomes. On a broader surface, she is interested in
+identifying structural sources of social problems and contributing to evidence-informed solutions.
+Currently, she is exploring multiple subfields of sociology, including social institutions, medical
+sociology, urban sociology.`,
+      links: [],
+    },
+  ],
+};
+
+const labDirector = people.labDirector;
+
 const alumni = [
   {
     name: 'Byungkyu Lee',
@@ -89,23 +249,56 @@ const alumni = [
     </Fragment>
     <Fragment slot="subtitle">
       <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Yoosik Youm, Principal Investigator</h2>
-        <div class="space-y-4 text-m">
-          <p>
-            Yoosik Youm is the Underwood Distinguished Professor of Sociology at Yonsei University, South Korea, where
-            he specializes in social network analysis, medical sociology, and social neuroscience. His research
-            investigates the intricate relationships between social networks, brain structure and connectivity, and
-            physical or psychological health outcomes across the lifespan. Professor Youm currently directs two
-            longitudinal studies: the Korean Social Life, Health, and Aging Project (KSHAP) and the Korean Study of
-            Adolescent Health (KSAH). KSHAP, initiated in 2011, examines sociocentric networks and biomarkers, including
-            brain MRI scans, among older adults in rural Korean villages, revealing insights such as the association
-            between social network positions and brain volume or connectivity. KSAH, initiated in 2021, focuses on high
-            school students in Seoul, exploring how social networks emerge through the co-evolution of social
-            connections and (dis)similar neural patterns. The study follows participants from their freshman year until
-            graduation across several waves of data collection. Professor Youm earned his Ph.D. in Sociology at the
-            University of Chicago and held faculty positions at the University of Illinois at Chicago before joining
-            Yonsei University.
-          </p>
+        <div class="mt-8 flex gap-6 items-start">
+          {
+            labDirector.image ? (
+              <img
+                src={labDirector.image}
+                alt={`${labDirector.name} photo`}
+                width="256"
+                loading="lazy"
+                class="w-56 md:w-64 h-auto rounded-xl object-cover flex-shrink-0"
+              />
+            ) : null
+          }
+
+          <div class="min-w-0">
+            <h2 class="text-2xl font-semibold mb-2">
+              {labDirector.name}
+              {labDirector.title ? <span class="font-normal">, {labDirector.title}</span> : null}
+            </h2>
+
+            {
+              labDirector.metaLines && labDirector.metaLines.length ? (
+                <div class="text-sm opacity-80 space-y-1">
+                  {labDirector.metaLines.map((line) => (
+                    <div>{line}</div>
+                  ))}
+                </div>
+              ) : null
+            }
+
+            <div class="space-y-4 text-m">
+              <p>{labDirector.bio}</p>
+            </div>
+
+            {
+              labDirector.links && labDirector.links.length ? (
+                <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                  {labDirector.links.map((l) => (
+                    <a
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="underline underline-offset-4 hover:opacity-80"
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </div>
+              ) : null
+            }
+          </div>
         </div>
       </div>
     </Fragment>
@@ -118,53 +311,56 @@ const alumni = [
       <span class="text-3xl font-semibold">Research Professors</span>
     </Fragment>
     <Fragment slot="subtitle">
-      <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Won-Gyo Shin, Ph.D.</h2>
-        <div class="space-y-4 text-m">
-          <p>
-            Won-Gyo recently joined the SNN Lab. She earned her B.A. in Psychology from Sungkyunkwan University and her
-            M.S. and Ph.D. in Cognitive Science and Brain &amp; Cognitive Sciences from Seoul National University. She
-            then worked as a postdoctoral researcher at the Social Cognitive Neuroscience Lab at the University of
-            Chicago and the Social Neuroscience Lab at Pusan National University. Her research explores how social and
-            non-social resources are associated with human mind and behavior, utilizing behavioral, neuroimaging, and
-            social network data.
-          </p>
-        </div>
-      </div>
-    </Fragment>
-    <Fragment slot="subtitle">
-      <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Ahhyun Cho, Ph.D.</h2>
-        <div class="space-y-4 text-m">
-          <p>
-            Ahhyun Cho is a postdoctoral researcher in the Department of Sociology at Yonsei University. Her research
-            interests include health inequality, immigrant adaptation, gender, social capital, and quantitative methods.
-            In her doctoral dissertation, she conducted an empirical analysis using longitudinal data on multicultural
-            adolescents in Korea to examine patterns of social capital at the individual and family levels and their
-            relationship to health disparities. She has presented her research at domestic and international academic
-            conferences, including the Korean Sociological Association, the Korean Population Association, and
-            ANPOR-APCA. Her work has been published in SSCI journals such as the International Journal of Intercultural
-            Relations, Cross- Cultural Research, and Applied Research in Quality of Life. She holds a BA, MA, and PhD
-            from Ewha Woman’s University.
-          </p>
-        </div>
-      </div>
-    </Fragment>
-    <Fragment slot="subtitle">
-      <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Sang Hee Lee, Ph.D.</h2>
-        <div class="space-y-4 text-m">
-          <p>
-            Sang Hee Lee is a post doctoral researcher in the Department of Sociology at Yonsei University. Previously,
-            she received her B.A. in Chinese Language and Literature from Ewha Woman’s University and M.A. in
-            International Studies from Seoul National University, after which she worked as a researcher specializing in
-            Chinese economic policy. Recognizing the limitations of state and capital centered perspectives in
-            addressing lived social realities, she returned to Ewha Womans University to pursue an integrated M.S./Ph.D.
-            in Social Welfare. She is interested in the dual mechanisms of social capital and its role in both
-            exacerbating inequality and enabling policy intervention, with an emphasis on welfare policy design and
-            public welfare attitudes when implementing policies.
-          </p>
-        </div>
+      <div class="mt-2">
+        {
+          people.researchProfessors.map((p) => (
+            <div class="mt-8 flex gap-6 items-start">
+              {p.image ? (
+                <img
+                  src={p.image}
+                  alt={`${p.name} photo`}
+                  width="256"
+                  loading="lazy"
+                  class="w-56 md:w-64 h-auto rounded-xl object-cover flex-shrink-0"
+                />
+              ) : null}
+
+              <div class="min-w-0">
+                <h2 class="text-2xl font-semibold mb-2">
+                  {p.name}
+                  {p.title ? <span class="font-normal">, {p.title}</span> : null}
+                </h2>
+
+                {p.metaLines.length ? (
+                  <div class="text-sm opacity-80 space-y-1">
+                    {p.metaLines.map((line) => (
+                      <div>{line}</div>
+                    ))}
+                  </div>
+                ) : null}
+
+                <div class="space-y-4 text-m">
+                  <p>{p.bio}</p>
+                </div>
+
+                {p.links && p.links.length ? (
+                  <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                    {p.links.map((l) => (
+                      <a
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="underline underline-offset-4 hover:opacity-80"
+                      >
+                        {l.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          ))
+        }
       </div>
     </Fragment>
   </Features>
@@ -176,33 +372,56 @@ const alumni = [
       <span class="text-3xl font-semibold">Graduate Students</span>
     </Fragment>
     <Fragment slot="subtitle">
-      <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Kiho Sung</h2>
-        <div class="space-y-4 text-m">
-          <p>
-            Kiho earned his B.A. and M.A. in Sociology from Yonsei University and is currently pursuing a Ph.D. in the
-            same field. His research examines how the structure of social relationships shapes health outcomes across
-            the life course. He also explores the neural foundations of social behavior and the social basis of brain
-            function by integrating socio-centric network analysis with neuroimaging. Recently, his work has focused on
-            the intersection of social science and artificial intelligence, investigating how AI can enhance social
-            research and how social data science can offer new insights to academia and society.
-          </p>
-        </div>
-      </div>
-    </Fragment>
-    <Fragment slot="subtitle">
-      <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Gayoung Choi</h2>
-        <div class="space-y-4 text-m">
-          <p>
-            Gayoung is currently a post-master’s researcher at the SNN Lab. During her master’s studies, she employed
-            causal mediation analysis and hierarchical linear modeling to investigate the relationship between social
-            conditions and individual inequalities among older adults. Her recent research focuses on utilizing
-            computational analysis methods to explore how social networks and knowledge influence individuals’
-            self-perception and knowledge formation. Prior to joining the SNN Lab, she earned both her B.A. and M.A. in
-            Sociology from Sungkyunkwan University.
-          </p>
-        </div>
+      <div class="mt-2">
+        {
+          people.graduateStudents.map((p) => (
+            <div class="mt-8 flex gap-6 items-start">
+              {p.image ? (
+                <img
+                  src={p.image}
+                  alt={`${p.name} photo`}
+                  width="256"
+                  loading="lazy"
+                  class="w-56 md:w-64 h-auto rounded-xl object-cover flex-shrink-0"
+                />
+              ) : null}
+
+              <div class="min-w-0">
+                <h2 class="text-2xl font-semibold mb-2">
+                  {p.name}
+                  {p.title ? <span class="font-normal">, {p.title}</span> : null}
+                </h2>
+
+                {p.metaLines.length ? (
+                  <div class="text-sm opacity-80 space-y-1">
+                    {p.metaLines.map((line) => (
+                      <div>{line}</div>
+                    ))}
+                  </div>
+                ) : null}
+
+                <div class="space-y-4 text-m">
+                  <p>{p.bio}</p>
+                </div>
+
+                {p.links && p.links.length ? (
+                  <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                    {p.links.map((l) => (
+                      <a
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="underline underline-offset-4 hover:opacity-80"
+                      >
+                        {l.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          ))
+        }
       </div>
     </Fragment>
   </Features>
@@ -214,48 +433,56 @@ const alumni = [
       <span class="text-3xl font-semibold">Research Assistants</span>
     </Fragment>
     <Fragment slot="subtitle">
-      <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Hyunsuh Cho</h2>
-        <div class="space-y-4 text-m">
-          <p>
-            Hyunsuh Cho is a third-year undergraduate student majoring in Sociology and Computer Science at Yonsei
-            University. Her research interests lie in network science and computational sociology, particularly focusing
-            on information diffusion, network dynamics, and computation for social good. She aims to further study
-            algorithmic and cognitive mechanisms in social networks, using computational modeling and cognitive
-            neuroscience.
-          </p>
-        </div>
-      </div>
-    </Fragment>
-    <Fragment slot="subtitle">
-      <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Chaeun Kim</h2>
-        <div class="space-y-4 text-m">
-          <p>
-            Chaeun Kim is a fourth-year undergraduate researcher in Sociology at Yonsei University, majoring in
-            Sociology. Her primary research interests include neuroscience and crime sociology. Specifically, she is
-            interested in how post-victimization processing and acceptance of criminal experiences may relate to
-            differences in neural activation patterns and variations in social network structure. Her research explores
-            brain-computer interfacing and network-based approaches to crime, victimization, and neuro-social activation
-            mechanisms.
-          </p>
-        </div>
-      </div>
-    </Fragment>
-    <Fragment slot="subtitle">
-      <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Hyunseo Yoon</h2>
-        <div class="space-y-4 text-m">
-          <p>
-            Hyunseo Yoon is a first-year undergraduate researcher in Sociology at Yonsei University. Her primary
-            research interests lie in quantitative social analysis of social networks. She is primarily committed to
-            transforming social structures into measurable and visualizable data to examine structural conditions and
-            its process in shaping individual and collective outcomes. On a broader surface, she is interested in
-            identifying structural sources of social problems and contributing to evidence-informed solutions.
-            Currently, she is exploring multiple subfields of sociology, including social institutions, medical
-            sociology, urban sociology.
-          </p>
-        </div>
+      <div class="mt-2">
+        {
+          people.researchAssistants.map((p) => (
+            <div class="mt-8 flex gap-6 items-start">
+              {p.image ? (
+                <img
+                  src={p.image}
+                  alt={`${p.name} photo`}
+                  width="256"
+                  loading="lazy"
+                  class="w-56 md:w-64 h-auto rounded-xl object-cover flex-shrink-0"
+                />
+              ) : null}
+
+              <div class="min-w-0">
+                <h2 class="text-2xl font-semibold mb-2">
+                  {p.name}
+                  {p.title ? <span class="font-normal">, {p.title}</span> : null}
+                </h2>
+
+                {p.metaLines.length ? (
+                  <div class="text-sm opacity-80 space-y-1">
+                    {p.metaLines.map((line) => (
+                      <div>{line}</div>
+                    ))}
+                  </div>
+                ) : null}
+
+                <div class="space-y-4 text-m">
+                  <p>{p.bio}</p>
+                </div>
+
+                {p.links && p.links.length ? (
+                  <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                    {p.links.map((l) => (
+                      <a
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="underline underline-offset-4 hover:opacity-80"
+                      >
+                        {l.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          ))
+        }
       </div>
     </Fragment>
   </Features>

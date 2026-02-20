@@ -20,7 +20,7 @@ export const headerData = {
         {
           text: 'KSAH',
           href: getPermalink('/projects/ksahpro'),
-        },
+        }
       ],
     },
     {
@@ -29,14 +29,6 @@ export const headerData = {
         {
           text: 'All Publications',
           href: getPermalink('/publications/allpub'),
-        },
-        {
-          text: 'KSHAP',
-          href: getPermalink('/publications/kshappub'),
-        },
-        {
-          text: 'KSAH',
-          href: getPermalink('/publications/ksahpub'),
         },
       ],
     },
@@ -52,5 +44,5 @@ export const footerData = {
   secondaryLinks: [],
   socialLinks: [],
   footNote:
-    'Website template by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo<a/>',
+  'Website template by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo">Arthelokyo</a>',
 };

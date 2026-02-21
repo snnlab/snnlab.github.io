@@ -249,7 +249,7 @@ const alumni = [
     </Fragment>
     <Fragment slot="subtitle">
       <div class="mt-8">
-        <div class="mt-8 flex gap-6 items-start">
+        <div class="mt-8 flex flex-col md:flex-row gap-6 items-start">
           {
             labDirector.image ? (
               <img
@@ -314,7 +314,7 @@ const alumni = [
       <div class="mt-2">
         {
           people.researchProfessors.map((p) => (
-            <div class="mt-8 flex gap-6 items-start">
+            <div class="mt-8 flex flex-col md:flex-row gap-6 items-start">
               {p.image ? (
                 <img
                   src={p.image}
@@ -375,7 +375,7 @@ const alumni = [
       <div class="mt-2">
         {
           people.graduateStudents.map((p) => (
-            <div class="mt-8 flex gap-6 items-start">
+            <div class="mt-8 flex flex-col md:flex-row gap-6 items-start">
               {p.image ? (
                 <img
                   src={p.image}
@@ -436,7 +436,7 @@ const alumni = [
       <div class="mt-2">
         {
           people.researchAssistants.map((p) => (
-            <div class="mt-8 flex gap-6 items-start">
+            <div class="mt-8 flex flex-col md:flex-row gap-6 items-start">
               {p.image ? (
                 <img
                   src={p.image}

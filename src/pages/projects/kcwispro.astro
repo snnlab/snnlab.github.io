@@ -1,0 +1,73 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'SNN Lab Projects/Data-KCWIS',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero>
+    <Fragment slot="title"> Projects: KCWIS </Fragment>
+    <Fragment slot="subtitle"> </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    classes={{ container: 'pt-0 mt-0 -mt-10 sm:-mt-16 lg:-mt-40' }}
+    title="Korean Child Well-Being Index Survey(KCWIS)"
+  >
+    <Fragment slot="subtitle">
+      <div class="ksah-description">
+        <p style="margin-bottom: 1.25rem;">
+          Korean Child Well-Being Index Survey (KCWIS) is a nationally representative study of Korean adolescents, which
+          were collected and funded by the Foundation of Jungwhan Bang. From 2009 to 2019, the data were collected every
+          year to understand circumstantial conditions and subjective well-being of children and adolescents in Korea,
+          and compare with other OECD countries to build an insight on problematic issues and provide alternatives on
+          them.
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center; margin-top: 2rem;">
+        <img
+          src="/kcwisprojdesc.jpg"
+          alt="KCWIS data"
+          style="max-width: 900px; width: 100%; height: auto; margin-bottom: 2rem;"
+        />
+      </div>
+
+      <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <strong>Official Links</strong>
+        <a
+          href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=node01430917&language=ko_KR"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="font-weight: 600; text-decoration: underline;"
+        >
+          Research Paper (Park et al., 2010)
+        </a>
+        <a
+          href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE01654273"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="font-weight: 600; text-decoration: underline;"
+        >
+          Research Paper (Youm and Seo, 2011)
+        </a>
+        <a
+          href="https://children365.or.kr/archives/activity_type/happiness-exponent"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="font-weight: 600; text-decoration: underline;"
+        >
+          Public Data
+        </a>
+      </div>
+    </Fragment>
+  </Features>
+</Layout>

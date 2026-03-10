@@ -21,6 +21,10 @@ export const headerData = {
           text: 'KSAH',
           href: getPermalink('/projects/ksahpro'),
         },
+        {
+          text: 'KCWIS',
+          href: getPermalink('/projects/kcwispro'),
+        },
       ],
     },
     {

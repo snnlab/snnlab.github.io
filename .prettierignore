@@ -2,3 +2,11 @@ dist
 node_modules
 .github
 .changeset
+
+# Ignore R-generated network animations
+public/*.html
+
+# Ignore standard build/dependency folders
+node_modules/
+dist/
+.astro/

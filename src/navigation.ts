@@ -29,12 +29,7 @@ export const headerData = {
     },
     {
       text: 'Publications',
-      links: [
-        {
-          text: 'All Publications',
-          href: getPermalink('/publications/allpub'),
-        },
-      ],
+      href: getPermalink('/publications/allpub'),
     },
     {
       text: 'News',

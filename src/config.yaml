@@ -54,4 +54,10 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'light:only' # This locks the site to light mode
+
+header:
+  isSticky: true
+  showToggleTheme: false # This removes the Sun/Moon icon
+  showRssFeed: false # THIS REMOVES THE RSS ICON (the XML link)
+  actions: [] # This ensures no other buttons/logos appear on the right

@@ -122,6 +122,32 @@ const metadata = {
       </div>
     </section>
 
+    <!-- NEW: Recruitment Section -->
+    <section class="px-[5vw] py-12 m-auto max-w-5xl text-center">
+      <div
+        class="bg-blue-50/50 dark:bg-slate-800/50 border border-blue-100 dark:border-slate-700 rounded-2xl p-8 md:p-10 shadow-sm transition-colors"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 font-heading text-slate-900 dark:text-white">
+          Join the SNN Lab
+        </h2>
+        <p
+          class="text-[clamp(1rem,1.2vw,1.125rem)] text-slate-700 dark:text-slate-300 mb-6 max-w-3xl mx-auto leading-relaxed"
+        >
+          We are actively seeking motivated MS/PhD students, undergraduate/graduate research assistants. If you are
+          passionate about exploring the intersection of social networks, neuroscience, and health, we would love to
+          hear from you.
+        </p>
+        <p class="text-base font-medium text-slate-600 dark:text-slate-400">
+          To inquire about available positions, please contact one of our team members via the
+          <a
+            href="/team/team"
+            class="font-bold text-primary hover:underline underline-offset-4 decoration-2 transition-all"
+            >Team section</a
+          >.
+        </p>
+      </div>
+    </section>
+
     <div class="bg-[#D9EAFD] dark:bg-black">
       <BlogLatestPosts title="Recent Lab News" classes={{ container: 'py-4 md:py-4 lg:py-4' }} />
     </div>
@@ -142,14 +168,9 @@ const metadata = {
         display: block;
         width: 100%;
         height: 450px;
-        /* Allows clicks on buttons */
         pointer-events: auto;
-
-        /* 'touch-action: pan-y' allows the user to scroll the whole PAGE up and down,
-       but prevents the IFRAME from capturing the scroll/pinch to zoom.
-    */
         touch-action: pan-y;
       }
     </style>
-  </main></Layout
->
+  </main>
+</Layout>
